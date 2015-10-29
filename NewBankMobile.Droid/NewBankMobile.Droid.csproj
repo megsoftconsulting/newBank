@@ -44,9 +44,17 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\AccountActivity.cs" />
+    <Compile Include="Fragments\AccountFragment.cs" />
+    <Compile Include="Fragments\PaymentFragment.cs" />
+    <Compile Include="Activities\TransactionListActivity.cs" />
+    <Compile Include="Fragments\MoneyTransferFragment.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="Adapters\TransactionAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -68,5 +76,10 @@
       <Project>{3B4139C5-1BE6-4F54-9951-80F83BB601DA}</Project>
       <Name>NewBankMobile.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fragments\" />
+    <Folder Include="Activities\" />
+    <Folder Include="Adapters\" />
   </ItemGroup>
 </Project>
