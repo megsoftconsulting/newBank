@@ -47,6 +47,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Login\LoginScreen.cs" />
+    <Compile Include="Screens\Login\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -61,6 +63,17 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\LoginScreen.axml" />
+    <AndroidResource Include="Resources\drawable\bankbackground.png" />
+    <AndroidResource Include="Resources\drawable\img_login_logo.png" />
+    <AndroidResource Include="Resources\drawable\rounded_button.axml" />
+    <AndroidResource Include="Resources\drawable\cardbackground.axml" />
+    <AndroidResource Include="Resources\values\themes.axml" />
+    <AndroidResource Include="Resources\drawable\ic_login_boton_entrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Screens\" />
+    <Folder Include="Screens\Login\" />
+  </ItemGroup>
 </Project>
