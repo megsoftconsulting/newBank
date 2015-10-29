@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NewBankMobile
+namespace NewBankMobile.Models
 {
     public class Account
     {

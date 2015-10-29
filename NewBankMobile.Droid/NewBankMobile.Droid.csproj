@@ -63,4 +63,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\NewBankMobile\NewBankMobile.Core.csproj">
+      <Project>{3B4139C5-1BE6-4F54-9951-80F83BB601DA}</Project>
+      <Name>NewBankMobile.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
