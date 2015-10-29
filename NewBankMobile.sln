@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile.Droid", "NewB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile.Droid.UITests", "NewBankMobile.Droid.UITests\NewBankMobile.Droid.UITests.csproj", "{A1B39E22-697E-4716-A0A6-20940C0AA052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile", "NewBankMobile\NewBankMobile.csproj", "{3B4139C5-1BE6-4F54-9951-80F83BB601DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile.Core", "NewBankMobile\NewBankMobile.Core.csproj", "{3B4139C5-1BE6-4F54-9951-80F83BB601DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
