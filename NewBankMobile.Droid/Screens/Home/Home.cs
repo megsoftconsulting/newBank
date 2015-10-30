@@ -17,9 +17,11 @@ namespace NewBankMobile.Droid
 	[Activity(Theme="@style/MyTheme.Base")]
 	public class Home : AppCompatActivity
 	{
-		DrawerLayout drawerLayout;
+		DrawerLayout _drawerLayout;
 
-		NavigationView navigationView;
+		Toolbar _toolbar;
+
+		NavigationView _navigationView;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -27,28 +29,36 @@ namespace NewBankMobile.Droid
 
 			SetContentView (Resource.Layout.Home);
 
-			var toolbar = FindViewById<Toolbar>(Resource.Id.my_awesome_toolbar);
+			ConfigToolBar();
 
-//			toolbar.SetTitleTextColor(2232);
+			SetReferences();
+		}
 
-			SetSupportActionBar (toolbar);
+		void SetReferences ()
+		{
+			_toolbar = FindViewById<Toolbar> (Resource.Id.my_awesome_toolbar);
+
+			_drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
+
+			_navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
+		}
+
+		void ConfigToolBar ()
+		{
+			SetSupportActionBar (_toolbar);
 
 			SupportActionBar.SetHomeAsUpIndicator (Resource.Drawable.ic_home_icono_burger);
 
 			SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 
-			drawerLayout = FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
-
-			navigationView = FindViewById<NavigationView> (Resource.Id.nav_view);
-
-			navigationView.NavigationItemSelected+= OnNavigationItemSelected;
+			_navigationView.NavigationItemSelected+= OnNavigationItemSelected;
 		}
 
 		void OnNavigationItemSelected (object sender, NavigationView.NavigationItemSelectedEventArgs e)
 		{
 			e.MenuItem.SetChecked (true);
 
-			drawerLayout.CloseDrawers ();
+			_drawerLayout.CloseDrawers ();
 		}
 
 		public override bool OnOptionsItemSelected (IMenuItem item) 
@@ -56,7 +66,7 @@ namespace NewBankMobile.Droid
 			switch (item.ItemId) 
 			{
 			case Android.Resource.Id.Home:
-				drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
+				_drawerLayout.OpenDrawer (Android.Support.V4.View.GravityCompat.Start);
 				return true;
 			}
 			return base.OnOptionsItemSelected (item);

@@ -84,6 +84,9 @@
     <AndroidResource Include="Resources\values\styles.axml" />
     <AndroidResource Include="Resources\menu\nav_menu.axml" />
     <AndroidResource Include="Resources\drawable\ic_home_icono_burger.png" />
+    <AndroidResource Include="Resources\drawable\ic_home_logo_banco.png" />
+    <AndroidResource Include="Resources\layout\header.axml" />
+    <AndroidResource Include="Resources\layout\DebitListViewItemLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

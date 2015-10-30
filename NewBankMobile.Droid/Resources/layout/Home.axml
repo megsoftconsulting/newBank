@@ -15,6 +15,18 @@
             android:layout_width="match_parent"
             android:minHeight="?attr/actionBarSize"
             android:background="#2157CD" />
+        <ListView
+            android:id="@+id/cuentaAhorro"
+            android:layout_width="fill_parent"
+            android:background="#000"
+            android:layout_height="100dp"
+            android:cacheColorHint="#FFDAFF7F" />
+        <ListView
+            android:id="@+id/cuentaCreditos"
+            android:layout_width="fill_parent"
+            android:background="#444"
+            android:layout_height="240dp"
+            android:cacheColorHint="#FFDAFF7F" />
     </LinearLayout>
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
