@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NewBankMobile.Droid.Activities
 {
-    [Activity(Label = "TransactionListActivity")]			
+    [Activity(Label = "Transaction List", Icon="@drawable/ic_home_logo_banco")]
     public class TransactionListActivity : Activity
     {
         ListView _listView;

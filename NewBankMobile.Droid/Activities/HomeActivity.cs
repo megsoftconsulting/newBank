@@ -16,7 +16,7 @@ using NewBankMobile.Interfaces;
 
 namespace NewBankMobile.Droid
 {
-    [Activity(Label = "HomeActivity")]			
+    [Activity(Label = "New Bank Mobile", Icon="@drawable/ic_home_logo_banco")]
     public class HomeActivity : Activity
     {
         IAccountRepository _accountRepository;

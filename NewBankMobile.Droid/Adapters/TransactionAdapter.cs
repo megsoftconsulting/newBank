@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace NewBankMobile.Droid.Adapters
 {
@@ -35,11 +36,17 @@ namespace NewBankMobile.Droid.Adapters
 
             var view = convertView ?? _context
                 .LayoutInflater
-                .Inflate(Android.Resource.Layout.SimpleListItem1, null);
+                .Inflate(Resource.Layout.TransactionListViewItem, null);
 
-            var text = view.FindViewById<TextView>(Android.Resource.Id.Text1);
+            var transactionDescriptionTextView = view.FindViewById<TextView>(Resource.Id.transactionDescription);
+            var transactionDateTextView = view.FindViewById<TextView>(Resource.Id.transactionDate);
+            var transactionAmountTextView = view.FindViewById<TextView>(Resource.Id.transactionAmount);
 
-            text.Text = model.Description;
+            transactionDescriptionTextView.Text = model.Description;
+            transactionDateTextView.Text = model.Date.ToString("D");
+            transactionAmountTextView.Text = model.Amount.ToString("C");
+
+            transactionAmountTextView.SetTextColor(model.Category == "Debit" ? Color.ParseColor("#FF6666") : Color.ParseColor("#00C13A"));
 
             return view;
         }

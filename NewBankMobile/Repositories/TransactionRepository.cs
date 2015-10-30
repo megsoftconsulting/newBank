@@ -22,15 +22,18 @@ namespace NewBankMobile.Repositories
             new Transaction {Id=7,AccountId = 1,Description="Vimenca",Amount=300.0m,Category="Debit", Date = _seedDate.AddHours(-0.5)},
             // Savings Account Transactions
 
-                new Transaction {Id=8,AccountId = 2,Description="Online Deposit", Amount=153.67m, Category="Credit",Date = _seedDate.AddHours(-12)},
-                new Transaction {Id=9,AccountId = 2,Description="Online Deposit",Amount=153.67m,Category="Credit", Date = _seedDate.AddHours(-10)},
+                new Transaction {Id=8,AccountId = 2,Description="Online Deposit", Amount=1500.00m, Category="Credit",Date = _seedDate.AddHours(-12)},
+                new Transaction {Id=9,AccountId = 2,Description="Online Deposit",Amount=1530.67m,Category="Credit", Date = _seedDate.AddHours(-10)},
                 new Transaction {Id=10,AccountId = 2,Description="Transfere to Account xx55",Amount=155.70m,Category="Debit", Date = _seedDate.AddHours(-3)},
                 new Transaction {Id=11,AccountId = 2,Description="Interes generated",Amount=23.0m,Category="Credit", Date = _seedDate.AddHours(-8)},
                 new Transaction {Id=12,AccountId = 2,Description="Payroll Click Click",Amount=1500.0m,Category="Credit", Date = _seedDate.AddHours(-5)},
-                new Transaction {Id=13,AccountId = 2,Description="Payment Morgate Loan",Amount=155.70m,Category="Debit", Date = _seedDate.AddHours(-3)},
+                new Transaction {Id=13,AccountId = 2,Description="Payment Morgate Loan",Amount=1045.91m,Category="Debit", Date = _seedDate.AddHours(-3)},
+                new Transaction {Id=20,AccountId = 2,Description="Online Deposit",Amount=1500.00m,Category="Credit", Date = _seedDate.AddHours(-10)},
+                new Transaction {Id=21,AccountId = 2,Description="Online Deposit",Amount=1500.00m,Category="Credit", Date = _seedDate.AddHours(-10)},
+                new Transaction {Id=22,AccountId = 2,Description="Online Deposit",Amount=1500.00m,Category="Credit", Date = _seedDate.AddHours(-10)},
 
-                new Transaction {Id=14,AccountId = 3,Description="Mustang GT",Amount=11500.0m,Category="Debit", Date = _seedDate.AddHours(-5)},
-                new Transaction {Id=15,AccountId = 3,Description="Hotel Grand Hyatt Dubai",Amount=155.70m,Category="Debit", Date = _seedDate.AddHours(-3)}
+                new Transaction {Id=14,AccountId = 3,Description="Mustang GT",Amount=35000.0m,Category="Debit", Date = _seedDate.AddHours(-5)},
+                new Transaction {Id=15,AccountId = 3,Description="Hotel Grand Hyatt Dubai",Amount=10530.00m,Category="Debit", Date = _seedDate.AddHours(-3)}
 
         };
 
