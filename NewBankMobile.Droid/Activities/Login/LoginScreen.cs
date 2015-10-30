@@ -14,7 +14,7 @@ using Android.Support.V7.App;
 
 namespace NewBankMobile.Droid
 {
-	[Activity (Label = "LoginScreen",MainLauncher = true, Theme="@style/Theme.AppCompat")]			
+	[Activity (Label = "NewBankMobile", MainLauncher = true, Theme="@style/Theme.AppCompat")]			
 	public class LoginScreen : AppCompatActivity
 	{
 		Button _loginButton;

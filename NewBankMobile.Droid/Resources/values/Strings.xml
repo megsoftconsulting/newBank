@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
 	<string name="hello">Hello World, Click Me!</string>
+
 	<string name="app_name">NewBankMobile.Droid</string>
+
+	<string-array name="HomeTitles">
+        <item>Account</item>
+        <item>Money Transfer</item>
+        <item>Payment</item>
+    </string-array>
+
 </resources>
