@@ -10,7 +10,7 @@ using NewBankMobile.Droid.Activities;
 
 namespace NewBankMobile.Droid
 {
-	[Activity (Label = "LoginScreen",MainLauncher = true, Theme="@style/Theme.AppCompat")]			
+    [Activity (Label = "LoginScreen",MainLauncher = true, Theme="@style/MyTheme", NoHistory=true)]			
 	public class LoginScreen : AppCompatActivity
 	{
 		Button _loginButton;
@@ -38,8 +38,6 @@ namespace NewBankMobile.Droid
 
 			_password = FindViewById<EditText>(Resource.Id.password);
 
-//			_loginButton.SetBinding
-
 			_loginButton.Click += OnLoginButtonClick;
 		}
 
@@ -50,8 +48,6 @@ namespace NewBankMobile.Droid
 
 		void DecorateWindow ()
 		{
-//			ActionBar.Hide();
-
 			Window.ClearFlags(WindowManagerFlags.Fullscreen);
 		}
 	}
