@@ -7,7 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace NewBankMobile.Droid
+namespace NewBankMobile.Droid.Activities
 {
     [Activity(Label = "NewBankMobile.Droid", Icon = "@drawable/icon")]
     public class MainActivity : Activity

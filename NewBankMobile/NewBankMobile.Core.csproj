@@ -3,10 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1B39E22-697E-4716-A0A6-20940C0AA052}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3B4139C5-1BE6-4F54-9951-80F83BB601DA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>NewBankMobile.Droid.UITests</RootNamespace>
-    <AssemblyName>NewBankMobile.Droid.UITests</AssemblyName>
+    <RootNamespace>NewBankMobile</RootNamespace>
+    <AssemblyName>NewBankMobile</AssemblyName>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -28,27 +30,23 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.0.7.1\lib\Xamarin.UITest.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\AccountType.cs" />
+    <Compile Include="Models\TransactionType.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\AccountOwner.cs" />
+    <Compile Include="Interfaces\ITransaction.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
+    <Compile Include="Interfaces\ILogin.cs" />
+    <Compile Include="Models\User.cs" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\NewBankMobile.Droid\NewBankMobile.Droid.csproj">
-      <Project>{F0EE7866-4BFA-4130-9860-E26A3CD8BE68}</Project>
-      <Name>NewBankMobile.Droid</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Tests.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="Models\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>
