@@ -7,8 +7,8 @@ namespace NewBankMobile.Droid.Adapters
 {
     public class TransactionAdapter : BaseAdapter<Transaction>
     {
-        private readonly Activity _context;
-        private readonly IList<Transaction> _transactions;
+        readonly Activity _context;
+        IList<Transaction> _transactions;
 
         public TransactionAdapter(Activity context, IList<Transaction> txs)
         {
@@ -37,7 +37,9 @@ namespace NewBankMobile.Droid.Adapters
                 .LayoutInflater
                 .Inflate(Android.Resource.Layout.SimpleListItem1, null);
 
-            view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = "Bind me to my data";
+            var text = view.FindViewById<TextView>(Android.Resource.Id.Text1);
+
+            text.Text = model.Category;
 
             return view;
         }
@@ -45,6 +47,13 @@ namespace NewBankMobile.Droid.Adapters
         public override int Count
         {
             get { return _transactions.Count; }
+        }
+
+
+        public void FillTransactions(IList<Transaction> trxs)
+        {
+            _transactions = trxs;
+            NotifyDataSetChanged();
         }
 
         #endregion

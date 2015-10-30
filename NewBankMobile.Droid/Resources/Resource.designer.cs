@@ -1924,8 +1924,8 @@ namespace NewBankMobile.Droid
 			// aapt resource value: 0x7f090069
 			public const int my_awesome_toolbar = 2131296361;
 			
-			// aapt resource value: 0x7f090084
-			public const int nav_messages = 2131296388;
+			// aapt resource value: 0x7f090085
+			public const int nav_messages = 2131296389;
 			
 			// aapt resource value: 0x7f09006c
 			public const int nav_view = 2131296364;
@@ -2076,6 +2076,9 @@ namespace NewBankMobile.Droid
 			
 			// aapt resource value: 0x7f090043
 			public const int topPanel = 2131296323;
+			
+			// aapt resource value: 0x7f090084
+			public const int transactionsList = 2131296388;
 			
 			// aapt resource value: 0x7f090064
 			public const int type = 2131296356;
@@ -2294,6 +2297,9 @@ namespace NewBankMobile.Droid
 			
 			// aapt resource value: 0x7f030031
 			public const int support_simple_spinner_dropdown_item = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int TransactionList = 2130903090;
 			
 			static Layout()
 			{

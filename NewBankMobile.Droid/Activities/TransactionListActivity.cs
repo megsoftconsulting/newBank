@@ -1,26 +1,66 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
+using NewBankMobile.Droid.Adapters;
+using System.Collections.Generic;
+using NewBankMobile.Interfaces;
+using NewBankMobile.Repositories;
+using System.Threading.Tasks;
 
 namespace NewBankMobile.Droid.Activities
 {
     [Activity(Label = "TransactionListActivity")]			
     public class TransactionListActivity : Activity
     {
+        ListView _listView;
+        TransactionAdapter _adapter;
+        ITransactionRepository _repository;
+
+        List<Transaction> _transactions;
+
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Create your application here
+            SetContentView(Resource.Layout.TransactionList);
+
+            Init();
+
+            SetReferences();
+
+        }
+
+        protected override async void OnResume()
+        {
+            base.OnResume();
+
+            _transactions = await GetTransactions(1);
+
+            _adapter.FillTransactions(_transactions);
+        }
+
+        void Init()
+        {
+            _repository = new TransactionRepository();
+
+            _transactions = new List<Transaction>();
+
+            _adapter = new TransactionAdapter(this, _transactions);
+        }
+
+        void SetReferences()
+        {
+
+            _listView = FindViewById<ListView>(Resource.Id.transactionsList);
+            _listView.Adapter = _adapter;
+        }
+
+        async Task<List<Transaction>> GetTransactions(long accId)
+        {
+            return await _repository.ListAllByAccountAsync(accId);
         }
     }
 }

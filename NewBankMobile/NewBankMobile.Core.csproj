@@ -44,11 +44,13 @@
     <Compile Include="Repositories\TransactionRepository.cs" />
     <Compile Include="Repositories\AccountRepository.cs" />
     <Compile Include="Repositories\LoginRepository.cs" />
+    <Compile Include="ViewModel\TransactionViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Humanizer, Version=1.37.7.0, Culture=neutral, PublicKeyToken=979442b78dfc278e">
