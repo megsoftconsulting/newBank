@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#2157CD" />
+    <ListView
+        android:id="@+id/cuentaAhorro"
+        android:layout_width="fill_parent"
+        android:background="#000"
+        android:layout_height="100dp"
+        android:cacheColorHint="#FFDAFF7F" />
+    <ListView
+        android:id="@+id/cuentaCreditos"
+        android:layout_width="fill_parent"
+        android:background="#444"
+        android:layout_height="240dp"
+        android:cacheColorHint="#FFDAFF7F" />
+</LinearLayout>
