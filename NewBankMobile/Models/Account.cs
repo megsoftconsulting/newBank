@@ -3,6 +3,7 @@
     public class Account
     {
         public long Id { get; set; }
+
         public long OwnerId { get; set; }
 
         public string Number { get; set; }

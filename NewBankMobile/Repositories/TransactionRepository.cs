@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using NewBankMobile.Interfaces;
 
-namespace NewBankMobile.Interfaces
+namespace NewBankMobile.Repositories
 {
     public class TransactionRepository : ITransactionRepository
     {
-        private static DateTime _seedDate = DateTime.Now;
+        static DateTime _seedDate = DateTime.Now;
 
-        private List<Transaction> _transactions = new List<Transaction>
+        List<Transaction> _transactions = new List<Transaction>
         {
             //Checking Account Transactions
             new Transaction {Id=1,AccountId = 1,Description="On Target",Category="Random Fun",Date = _seedDate.AddHours(-12)},

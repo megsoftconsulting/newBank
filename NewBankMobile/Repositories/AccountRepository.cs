@@ -2,8 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using NewBankMobile.Models;
+using NewBankMobile.Interfaces;
 
-namespace NewBankMobile.Interfaces
+namespace NewBankMobile.Repositories
 {
     /// <summary>
     ///     In-Memory implementation of the <see cref="IAccountRepository" /> Interface
