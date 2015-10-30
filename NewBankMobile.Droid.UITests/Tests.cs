@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Android;
@@ -11,13 +9,23 @@ namespace NewBankMobile.Droid.UITests
     [TestFixture]
     public class Tests
     {
-        AndroidApp app;
-
         [SetUp]
         public void BeforeEachTest()
         {
-            app = ConfigureApp.Android.StartApp();
+            var path = @"../../../NewBankMobile.Droid/bin/Debug/";
+            var apkName = "com.megsoftconsulting.talk.newbankmobile.apk";
+            var apkPath = $"{path}{apkName}";
+
+            app = ConfigureApp
+                .Android
+                .ApkFile(apkPath)
+                .EnableLocalScreenshots()
+                //.PreferIdeSettings()
+                //.DeviceSerial("")
+                .StartApp();
         }
+
+        private AndroidApp app;
 
         [Test]
         public void ClickingButtonTwiceShouldChangeItsLabel()
@@ -26,11 +34,10 @@ namespace NewBankMobile.Droid.UITests
 
             app.Tap(MyButton);
             app.Tap(MyButton);
-            AppResult[] results = app.Query(MyButton);
+            var results = app.Query(MyButton);
             app.Screenshot("Button clicked twice.");
 
             Assert.AreEqual("2 clicks!", results[0].Text);
         }
     }
 }
-
