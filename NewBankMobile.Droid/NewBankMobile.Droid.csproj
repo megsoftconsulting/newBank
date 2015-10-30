@@ -67,6 +67,8 @@
     <Compile Include="Screens\Home\Home.cs" />
     <Compile Include="Screens\Login\LoginScreen.cs" />
     <Compile Include="Screens\Login\LoginViewModel.cs" />
+    <Compile Include="Adapters\AccountAdapter.cs" />
+    <Compile Include="Activities\HomeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -96,6 +98,9 @@
     <AndroidResource Include="Resources\menu\nav_menu.axml" />
     <AndroidResource Include="Resources\values\styles.axml" />
     <AndroidResource Include="Resources\layout\TransactionList.axml" />
+    <AndroidResource Include="Resources\layout\HomeActivity.axml" />
+    <AndroidResource Include="Resources\layout\AccountFragment.axml" />
+    <AndroidResource Include="Resources\layout\TransactionListViewItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

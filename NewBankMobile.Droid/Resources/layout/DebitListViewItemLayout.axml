@@ -21,17 +21,19 @@
             android:textColor="#415D92"
             android:text="Ahorros"
             android:layout_alignParentStart="true"
-            android:id="@+id/type" />
+            android:id="@+id/accountTypeLabel" />
         <TextView
             android:layout_width="wrap_content"
             android:textColor="#C1C0C0"
+            android:id="@+id/accountName"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/type"
+            android:layout_below="@+id/accountTypeLabel"
             android:text="Ahorros" />
         <TextView
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:textColor="#00C13A"
+            android:id="@+id/accountAmount"
             android:layout_centerVertical="true"
             android:layout_height="wrap_content"
             android:text="$200,000.00" />

@@ -39,7 +39,7 @@ namespace NewBankMobile.Droid.Adapters
 
             var text = view.FindViewById<TextView>(Android.Resource.Id.Text1);
 
-            text.Text = model.Category;
+            text.Text = model.Description;
 
             return view;
         }

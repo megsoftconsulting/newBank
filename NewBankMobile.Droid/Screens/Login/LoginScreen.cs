@@ -45,7 +45,7 @@ namespace NewBankMobile.Droid
 
 		void OnLoginButtonClick (object sender, EventArgs e)
 		{
-			StartActivity(typeof(TransactionListActivity));
+			StartActivity(typeof(HomeActivity));
 		}
 
 		void DecorateWindow ()

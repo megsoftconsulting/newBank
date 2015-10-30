@@ -19,16 +19,28 @@ namespace NewBankMobile.Repositories
                 OwnerId = 1,
                 Name = "Smart Checking",
                 Number = "XXX XXX 007",
-                CurrentBalance = 563677.56m
+                CurrentBalance = 563677.56m,
+                AccountType = AccountType.Debit
             },
             new Account
             {
                 Id = 2,
                 OwnerId = 1,
-                Name = "Smart Savings",
+                Name = "Click Click Savings",
                 Number = "XXX XXX 357",
-                CurrentBalance = 3083677.56m
+                CurrentBalance = 78953677.00m,
+                AccountType = AccountType.Debit
+            },
+            new Account
+            {
+                Id = 3,
+                OwnerId = 1,
+                Name = "Credit Card Click++",
+                Number = "XXX XXX 557",
+                CurrentBalance = 1323648.42m,
+                AccountType = AccountType.Credit
             }
+
         };
 
         public Task<List<Account>> GetByUserIdAsync(long id)

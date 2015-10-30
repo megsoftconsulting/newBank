@@ -15,6 +15,7 @@ namespace NewBankMobile.Droid.Activities
     public class TransactionListActivity : Activity
     {
         ListView _listView;
+
         TransactionAdapter _adapter;
         ITransactionRepository _repository;
 
@@ -37,7 +38,9 @@ namespace NewBankMobile.Droid.Activities
         {
             base.OnResume();
 
-            _transactions = await GetTransactions(1);
+            var accountId = Intent.GetLongExtra("ACCOUNT_ID", 0);
+
+            _transactions = await GetTransactions(accountId);
 
             _adapter.FillTransactions(_transactions);
         }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:padding="6dp"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#415D92"
+            android:textSize="25sp"
+            android:text="Debit Accounts" />
+        <ListView
+            android:id="@+id/accountDebitListView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#415D92"
+            android:textSize="25sp"
+            android:layout_height="wrap_content"
+            android:text="Credit Accounts" />
+        <ListView
+            android:id="@+id/accountCreditListView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</LinearLayout>

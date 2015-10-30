@@ -11,5 +11,7 @@
         public string Name { get; set; }
 
         public decimal CurrentBalance { get; set; }
+
+        public AccountType AccountType { get; set;}
     }
 }
