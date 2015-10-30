@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace NewBankMobile.Droid.Activities
 {
-    [Activity(Label = "NewBankMobile.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "NewBankMobile.Droid", Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         int count = 1;
