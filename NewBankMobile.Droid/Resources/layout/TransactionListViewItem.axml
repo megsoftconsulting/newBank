@@ -3,8 +3,9 @@
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:paddingTop="12dp"
+    android:paddingBottom="12dp"
     android:paddingRight="20dp"
-    android:layout_height="fill_parent">
+    android:layout_height="match_parent">
     <ImageView
         android:src="@drawable/ic_home_logo_banco"
         android:layout_width="32dp"
@@ -19,23 +20,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#415D92"
-            android:text="Ahorros"
+            android:text="Hotel 5 Starts"
+            android:padding="5dp"
             android:layout_alignParentStart="true"
-            android:id="@+id/accountTypeLabel" />
+            android:textSize="16sp"
+            android:id="@+id/transactionDescription" />
         <TextView
             android:layout_width="wrap_content"
             android:textColor="#C1C0C0"
-            android:id="@+id/accountName"
+            android:id="@+id/transactionDate"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/accountTypeLabel"
-            android:text="Ahorros" />
+            android:padding="5dp"
+            android:textSize="10sp"
+            android:layout_below="@+id/transactionDescription"
+            android:text="Oct 10 2015" />
         <TextView
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:textColor="#00C13A"
-            android:id="@+id/accountAmount"
+            android:id="@+id/transactionAmount"
             android:layout_centerVertical="true"
             android:layout_height="wrap_content"
-            android:text="$200,000.00" />
+            android:text="$50,000.00" />
     </RelativeLayout>
 </LinearLayout>

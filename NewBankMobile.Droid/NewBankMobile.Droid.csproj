@@ -15,7 +15,7 @@
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <AssemblyName>NewBankMobile.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +42,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -55,11 +64,17 @@
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\SplashActivity.cs" />
     <Compile Include="Adapters\TransactionAdapter.cs" />
+    <Compile Include="Screens\Home\Home.cs" />
+    <Compile Include="Screens\Login\LoginScreen.cs" />
+    <Compile Include="Screens\Login\LoginViewModel.cs" />
+    <Compile Include="Adapters\AccountAdapter.cs" />
+    <Compile Include="Activities\HomeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -69,6 +84,23 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\DebitListViewItemLayout.axml" />
+    <AndroidResource Include="Resources\layout\header.axml" />
+    <AndroidResource Include="Resources\layout\Home.axml" />
+    <AndroidResource Include="Resources\layout\LoginScreen.axml" />
+    <AndroidResource Include="Resources\drawable\bankbackground.png" />
+    <AndroidResource Include="Resources\drawable\cardbackground.axml" />
+    <AndroidResource Include="Resources\drawable\ic_home_icono_burger.png" />
+    <AndroidResource Include="Resources\drawable\ic_home_logo_banco.png" />
+    <AndroidResource Include="Resources\drawable\ic_login_boton_entrar.png" />
+    <AndroidResource Include="Resources\drawable\img_login_logo.png" />
+    <AndroidResource Include="Resources\drawable\rounded_button.axml" />
+    <AndroidResource Include="Resources\menu\nav_menu.axml" />
+    <AndroidResource Include="Resources\values\styles.axml" />
+    <AndroidResource Include="Resources\layout\TransactionList.axml" />
+    <AndroidResource Include="Resources\layout\HomeActivity.axml" />
+    <AndroidResource Include="Resources\layout\AccountFragment.axml" />
+    <AndroidResource Include="Resources\layout\TransactionListViewItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -78,4 +110,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Screens\" />
+    <Folder Include="Screens\Login\" />
+    <Folder Include="Screens\Home\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Fragments\" />
+    <Folder Include="Activities\" />
+    <Folder Include="Adapters\" />
+  </ItemGroup>
 </Project>

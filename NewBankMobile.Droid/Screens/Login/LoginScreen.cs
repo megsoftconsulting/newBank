@@ -1,20 +1,16 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
+using NewBankMobile.Droid.Activities;
 
 namespace NewBankMobile.Droid
 {
-	[Activity (Label = "LoginScreen",MainLauncher = true, Theme="@style/Theme.AppCompat")]			
+    [Activity (Label = "LoginScreen",MainLauncher = true, Theme="@style/MyTheme", NoHistory=true)]			
 	public class LoginScreen : AppCompatActivity
 	{
 		Button _loginButton;
@@ -42,20 +38,16 @@ namespace NewBankMobile.Droid
 
 			_password = FindViewById<EditText>(Resource.Id.password);
 
-//			_loginButton.SetBinding
-
 			_loginButton.Click += OnLoginButtonClick;
 		}
 
 		void OnLoginButtonClick (object sender, EventArgs e)
 		{
-			StartActivity(typeof(Home));
+			StartActivity(typeof(HomeActivity));
 		}
 
 		void DecorateWindow ()
 		{
-//			ActionBar.Hide();
-
 			Window.ClearFlags(WindowManagerFlags.Fullscreen);
 		}
 	}

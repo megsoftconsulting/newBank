@@ -1,15 +1,10 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Support.V4.App;
 using Android.Support.V4.Widget;
-using Android;
 using Android.Views;
 using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using Android.Support.V7.App;
-using Android.Graphics;
 
 namespace NewBankMobile.Droid
 {
@@ -29,9 +24,9 @@ namespace NewBankMobile.Droid
 
 			SetContentView (Resource.Layout.Home);
 
-			ConfigToolBar();
-
 			SetReferences();
+
+            ConfigToolBar();
 		}
 
 		void SetReferences ()
