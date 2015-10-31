@@ -18,7 +18,7 @@ namespace NewBankMobile.Interfaces
                 OwnerId = 1,
                 Name = "Smart Checking",
                 Number = "XXX XXX 007",
-                CurrentBalance = 3677.56m
+                CurrentBalance = 563677.56m
             },
             new Account
             {
@@ -26,7 +26,7 @@ namespace NewBankMobile.Interfaces
                 OwnerId = 1,
                 Name = "Smart Savings",
                 Number = "XXX XXX 357",
-                CurrentBalance = 3677.56m
+                CurrentBalance = 3083677.56m
             }
         };
 
