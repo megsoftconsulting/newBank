@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile.Core", "NewBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile.Tests", "NewBankMobile.Tests\NewBankMobile.Tests.csproj", "{C0707078-B39F-4DFD-875F-73A8103B344C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankMobile.Api", "NewBankMobile.Api\NewBankMobile.Api.csproj", "{0BE8BC51-E1EA-4E94-9E45-BEDB9685DD2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{C0707078-B39F-4DFD-875F-73A8103B344C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0707078-B39F-4DFD-875F-73A8103B344C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0707078-B39F-4DFD-875F-73A8103B344C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE8BC51-E1EA-4E94-9E45-BEDB9685DD2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE8BC51-E1EA-4E94-9E45-BEDB9685DD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE8BC51-E1EA-4E94-9E45-BEDB9685DD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE8BC51-E1EA-4E94-9E45-BEDB9685DD2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
